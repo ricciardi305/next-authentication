@@ -25,7 +25,7 @@ export default function LoginForm() {
         })
     }
     return (
-        <div className="flex flex-col items-center justify-center gap-3 bg-gray-300 rounded-lg p-5 shadow-lg">
+        <div className="flex flex-col items-center justify-center gap-3 bg-gray-300 rounded-lg p-5 shadow-lg w-96">
             <h1 className="text-3xl font-bold">Bem vindo</h1>
             <p className="text-lg">
                 Entre utilizando email e senha
@@ -44,7 +44,7 @@ export default function LoginForm() {
                 <button className="w-10 h-10 bg-[#00d3be] rounded-lg flex items-center justify-center" onClick={() => signIn("google", { callbackUrl: "/dashboard" })}>
                     <FaGoogle />
                 </button>
-                <button className="w-10 h-10 bg-[#00d3be] rounded-lg flex items-center justify-center">
+                <button className="w-10 h-10 bg-[#00d3be] rounded-lg flex items-center justify-center" onClick={() => signIn("github", { callbackUrl: "http://localhost:3000/dashboard" }, )}>
                     <FaGithub />
                 </button>
             </div>

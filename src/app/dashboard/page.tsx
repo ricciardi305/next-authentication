@@ -4,6 +4,7 @@ import LogoutButton from "../../components/LogoutButton"
 
 export default async function Page() {
     const session = await getServerSession()
+    console.log("🚀 ~ Page ~ session:", session)
     if(!session) {
         redirect('/')
     }
