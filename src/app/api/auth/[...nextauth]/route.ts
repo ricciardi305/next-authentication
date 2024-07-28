@@ -1,5 +1,6 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import Google from "next-auth/providers/google";
 
 const handler = NextAuth({
     pages: {
@@ -27,6 +28,10 @@ const handler = NextAuth({
 
             return null
           }
+        }),
+        Google({
+            clientId: process.env.GOOGLE_CLIENT_ID ?? '',
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? '',
         })
       ]
 })
