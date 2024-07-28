@@ -37,14 +37,14 @@ export default function LoginForm() {
                 <label className="w-full" htmlFor="password">
                     <input type="password" className="input input-accent w-full" placeholder="Senha" name="password" id="password" />
                 </label>
-                <button className="btn btn-accent w-full" type="submit">Entrar</button>
+                <button className="btn btn-accent w-full hover:bg-cyan-800 transform hover:scale-110 transition-all hover:text-slate-100" type="submit">Entrar</button>
             </form>
             <div className="flex mt-3 w-full gap-3 items-center justify-center">
                 <p>Ou entre com</p>
-                <button className="w-10 h-10 bg-[#00d3be] rounded-lg flex items-center justify-center" onClick={() => signIn("google", { callbackUrl: "/dashboard" })}>
+                <button className="w-10 h-10 bg-[#00d3be] rounded-lg flex items-center justify-center hover:bg-cyan-800 transform hover:scale-110 transition-all hover:text-slate-100" onClick={() => signIn("google", { callbackUrl: "/dashboard" })}>
                     <FaGoogle />
                 </button>
-                <button className="w-10 h-10 bg-[#00d3be] rounded-lg flex items-center justify-center" onClick={() => signIn("github", { callbackUrl: "http://localhost:3000/dashboard" }, )}>
+                <button className="w-10 h-10 bg-[#00d3be] rounded-lg flex items-center justify-center hover:bg-cyan-800 transform hover:scale-110 transition-all hover:text-slate-100" onClick={() => signIn("github", { callbackUrl: "http://localhost:3000/dashboard" }, )}>
                     <FaGithub />
                 </button>
             </div>
